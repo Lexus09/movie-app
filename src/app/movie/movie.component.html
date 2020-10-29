@@ -1,0 +1,18 @@
+<section class="movie" *ngIf="movie">
+    <div class="movie-wrapper" (click)="onClickToggleClass()" [class.flip]="isFlipped">
+        <img class="movie-wrapper-poster" [src]="posterUrl" [alt]="movie.title">
+        <div class="movie-wrapper-rating">{{ (movie.vote_average * 10) }}%</div>
+        <div class="movie-wrapper-info">
+            <div class="movie-wrapper-info-title">
+                {{ movie.title | titlecase }}
+            </div>
+            <div class="movie-wrapper-info-votes">
+                <app-rating [ratingOutOf10]="movie.vote_average"></app-rating>
+                <span>{{ movie.vote_average }}</span>
+            </div>
+            <div class="movie-wrapper-info-year">
+                {{ movie.release_date | date: "yyyy" }}
+            </div>
+        </div>
+    </div>
+</section>

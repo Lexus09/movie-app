@@ -1,0 +1,50 @@
+.movie {
+    height: 100%;
+    perspective: 600px;
+
+    &-wrapper {
+        height: 100%;
+        box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.7);
+        position: relative;
+        transition: transform 0.5s ease;
+        transform-style: preserve-3d;
+        transform-origin: center right;
+        cursor: pointer;
+
+        &-poster {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+            object-fit: cover;
+        }
+
+        &-rating {
+            position: absolute;
+            backface-visibility: hidden;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #fff;
+            text-align: center;
+            padding: 0.4rem;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        &-info {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        &.flip {
+            transform: translateX(-100%) rotateY(-180deg);
+        }
+    }
+}

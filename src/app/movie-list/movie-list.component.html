@@ -1,0 +1,7 @@
+<section class="movies-list">
+    <div class="movies-list-wrapper">
+        <ng-container *ngFor="let movie of (movies$ | async)">
+            <app-movie [movie]="movie"></app-movie>
+        </ng-container>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+<nav class="nav-bar">
+    <div class="nav-bar-burger-menu" (click)="isToggled = !isToggled">
+        <div [class.toggled]="isToggled"></div>
+    </div>
+    <div class="nav-bar-menu-wrapper" [class.toggled]="isToggled">
+        <ul>
+            <li>Movies</li>
+            <li>TV Shows</li>
+            <li>About</li>
+            <li>Info</li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,21 @@
+.rating {
+    --rightClipPercentage: 0;
+    display: flex;
+
+    &-star-wrapper {
+        height: 25px;
+        width: 25px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        &:last-child {
+            img {
+                clip-path: inset(0 var(--rightClipPercentage) 0 0);
+            }
+        }
+    }
+}
