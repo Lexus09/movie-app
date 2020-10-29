@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, Renderer2, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-rating',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input, ElementRef, Renderer2 } from '@angular/core';
 export class RatingComponent implements OnInit {
 
   @Input() ratingOutOf10: number;
+  @HostBinding('class.rating') hostClass = true;
 
   noOfStars: number[];
 

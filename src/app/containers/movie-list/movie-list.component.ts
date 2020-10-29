@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../services/movie.service';
+import { MovieService } from '../../services/movie.service';
 import { tap, map, distinctUntilChanged } from 'rxjs/operators';
-import { MovieTypes, Movie } from '../movie/movie.model';
+import { MovieTypes, Movie } from '../../components/movie/movie.model';
 import { Observable } from 'rxjs';
 
 @Component({
